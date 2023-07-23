@@ -1,4 +1,5 @@
 import { getCountryData } from "../helper/getCountryData";
+import { IconArrow, IconMicrophone, IconSend } from "../style/IconStyle";
 import {
   ErrorMessage,
   FlagImage,
@@ -16,14 +17,22 @@ export const MessageContent = ({
   return (
     <MessageContainer>
       <MessageBubbleTutorial>
-        ingresa el número y luego el micrófono
+        Ingresar número country/area/phone
+        <div>
+          <IconMicrophone />
+        </div>
       </MessageBubbleTutorial>
       <MessageBubbleTutorial>
-        Para resetear apretar flecha de atrás
+        Reset
+        <div>
+          <IconArrow />
+        </div>
       </MessageBubbleTutorial>
       <MessageBubbleTutorial>
-        Al terminar aparecerá el botón de send y podrás chatear con números que
-        no tengas agendados
+        Comenzar a chatear
+        <div>
+          <IconSend />
+        </div>
       </MessageBubbleTutorial>
       {countryCode !== "" && (
         <MessageBubble>

@@ -46,13 +46,13 @@ export const useForm = () => {
 
  useEffect(() => {
   if (countryCode === "" && areaCode === "" && phoneNumber === "") {
-   setPlaceholderText("enter country code");
+   setPlaceholderText("Enter country code");
   } else if (countryCode !== "" && areaCode === "" && phoneNumber === "") {
-   setPlaceholderText("enter area code");
+   setPlaceholderText("Enter area code");
   } else if (countryCode !== "" && areaCode !== "" && phoneNumber === "") {
-   setPlaceholderText("enter phone number");
+   setPlaceholderText("Enter phone number");
   } else if (countryCode !== "" && areaCode !== "" && phoneNumber !== "") {
-   setPlaceholderText("press send");
+   setPlaceholderText("Press send");
   }
  }, [countryCode, areaCode, phoneNumber]);
 

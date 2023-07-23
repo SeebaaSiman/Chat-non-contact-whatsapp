@@ -14,10 +14,15 @@ export const ChatContainer = styled.div`
   justify-content: space-between;
 margin: 3rem 0;
   @media ${device.sm} {
-    width: 70%;
+    width: 60%;
   }
   @media ${device.md} {
-    width: 50%;
+    margin-left: 50px;
+    width: 430px;
+  }
+  @media ${device.lg} {
+    margin-left: 100px;
+    /* width: 30%; */
   }
 `;
 

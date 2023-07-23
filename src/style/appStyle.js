@@ -36,7 +36,10 @@ export const Page = styled.header`
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  background-color: #08141a;
+  background-color:#a5c174;
+  @media ${device.sm}{
+    background-color: #444;
+  }
   @media ${device.md} {
     justify-content: center;
     align-items: start;
@@ -50,11 +53,11 @@ export const Page = styled.header`
   width: 100%;
   height: 100%;
   object-fit: cover;
-
 }
     @media ${device.md} {
       object-position: right;
       object-fit: contain;
     }
+
   }
 `;

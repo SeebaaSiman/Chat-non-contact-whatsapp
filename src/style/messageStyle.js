@@ -17,37 +17,20 @@ export const MessageBubble = styled.div`
   font-size: 1.1rem;
   border-radius: 16px 10px 16px 16px;
   padding: 0.5rem 1rem;
-  margin-right: 1rem;
-  margin-top: 1.4rem;
+  margin-right: .5rem;
+  margin-top: .8rem;
   max-width: 80%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  &::before {
-    content: "";
-    position: absolute;
-    top: 1%;
-    right: -2%;
-    border-style: solid;
-    border-width: 0 9px 9px 9px;
-    transform: rotate(148deg);
-    border-color: transparent transparent #00ab88 transparent;
 
-  }
 `;
 export const MessageBubbleTutorial = styled(MessageBubble)`
 align-self: start;
-margin-left: 1rem;
+margin-left: .5rem;
+margin-right: 0rem;
 background-color: #1c2c33;
 color:#fff;
-&::before{
-  top:-3%;
-right:91%;
-transform: rotate(190deg);
-border-color: transparent transparent #1c2c33 transparent;
-@media ${device.sm} {
-  top:-5%;
-  right:94%;
-    }
-}
+
+
 `
 export const FlagImage = styled.img`
   width: 24px;
