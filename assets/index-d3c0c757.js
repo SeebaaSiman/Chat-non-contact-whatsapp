@@ -242,7 +242,7 @@ animation: ${vl} .4s forwards;
     width:90%;
     font-size: 1.3rem;
 }
-`,Ag=A.div`
+`,Ag="/Chat-non-contact-whatsapp/assets/eeuu-06202a7e.png",jg="/Chat-non-contact-whatsapp/assets/spain-a63b68be.png",Og=A.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -275,14 +275,14 @@ animation: ${vl} .4s forwards;
   border-radius: 0.3125em;
   width: 2rem;
   height: 2.2rem;
-  background-image: url("/src/language/eeuu.png");
+  background-image: url(${Ag});
   background-size: cover;
   box-shadow: inset 0 -0.0625em 0.0625em 0.125em rgb(0 0 0 / 0.1),
     inset 0 -0.125em 0.0625em rgb(0 0 0 / 0.2),
     inset 0 0.1875em 0.0625em rgb(255 255 255 / 0.3),
     0 0.125em 0.125em rgb(0 0 0 / 0.5);
   transition: left 0.6s forwards;
-`,jg=A.input`
+`,Dg=A.input`
   appearance: none;
   position: absolute;
   z-index: 1;
@@ -290,7 +290,6 @@ animation: ${vl} .4s forwards;
   width: 100%;
   height: 100%;
 
-  /* fix em sizing */
   font: inherit;
   opacity: 0;
   cursor: pointer;
@@ -301,10 +300,10 @@ animation: ${vl} .4s forwards;
   }
   &:checked + ${ea} ${Uf} {
     left: 1.8rem;
-    background-image: url("/src/language/spain.png");
+    background-image: url(${jg});
     background-size: cover;
   }
-`,Og=()=>{const{setLanguage:e}=jo(),t=n=>{const o=n.target.checked?"es":"en";e(o)};return U.jsxs(Ag,{children:[U.jsx(jg,{type:"checkbox",onChange:t}),U.jsx(ea,{children:U.jsx(Uf,{})})]})},Dg=()=>{const{onSend:e,onReset:t,onNextInput:n,onInputChange:o,countryCode:r,areaCode:l,phoneNumber:i,inputValue:a,errorMessage:s,placeholderText:c}=rm(),{texts:g,setLanguage:m}=jo();return U.jsxs(Ng,{children:[U.jsxs(Ig,{children:[U.jsx(kf,{onClick:t}),U.jsx(Og,{}),U.jsx("p",{children:g.toggleLanguage}),U.jsxs("div",{children:[U.jsx(Sg,{}),U.jsx(Tg,{})]}),U.jsx(kg,{})]}),U.jsx(_g,{countryCode:r,areaCode:l,phoneNumber:i,errorMessage:s}),U.jsxs(Mg,{children:[U.jsxs(Lg,{children:[U.jsx(xg,{}),U.jsx($g,{type:"number",placeholder:c,value:a,onChange:o}),U.jsxs("div",{children:[U.jsx(zg,{}),U.jsx(Ug,{})]})]}),r&&l&&i?U.jsx(zf,{onClick:e}):U.jsx(xf,{onClick:n})]})]})},Ef=A.h1`
+`,Fg=()=>{const{setLanguage:e}=jo(),t=n=>{const o=n.target.checked?"es":"en";e(o)};return U.jsxs(Og,{children:[U.jsx(Dg,{type:"checkbox",onChange:t}),U.jsx(ea,{children:U.jsx(Uf,{})})]})},Bg=()=>{const{onSend:e,onReset:t,onNextInput:n,onInputChange:o,countryCode:r,areaCode:l,phoneNumber:i,inputValue:a,errorMessage:s,placeholderText:c}=rm(),{texts:g,setLanguage:m}=jo();return U.jsxs(Ng,{children:[U.jsxs(Ig,{children:[U.jsx(kf,{onClick:t}),U.jsx(Fg,{}),U.jsx("p",{children:g.toggleLanguage}),U.jsxs("div",{children:[U.jsx(Sg,{}),U.jsx(Tg,{})]}),U.jsx(kg,{})]}),U.jsx(_g,{countryCode:r,areaCode:l,phoneNumber:i,errorMessage:s}),U.jsxs(Mg,{children:[U.jsxs(Lg,{children:[U.jsx(xg,{}),U.jsx($g,{type:"number",placeholder:c,value:a,onChange:o}),U.jsxs("div",{children:[U.jsx(zg,{}),U.jsx(Ug,{})]})]}),r&&l&&i?U.jsx(zf,{onClick:e}):U.jsx(xf,{onClick:n})]})]})},Ef=A.h1`
   z-index: 200;
   color: #fff;
   text-transform: uppercase;
@@ -315,7 +314,7 @@ animation: ${vl} .4s forwards;
   color: #00d670;
   animation: ${ot} .6s forwards;
   animation-fill-mode: forwards;
-`,Fg=A.header`
+`,Vg=A.header`
   display: flex;
   flex-direction: column;
   margin: 1rem;
@@ -333,7 +332,7 @@ animation: ${vl} .4s forwards;
       margin-left: 15px;
     }
   }
-`,Bg=A.div`
+`,Hg=A.div`
   min-height: 100vh;
   width: 100vw;
   display: flex;
@@ -364,10 +363,10 @@ animation: ${vl} .4s forwards;
     }
 
   }
-`,Vg=()=>{const{texts:e}=jo();return U.jsxs(Bg,{children:[U.jsxs(Fg,{children:[U.jsx(Ef,{children:e.title}),U.jsx(Pf,{children:e.title2})]}),U.jsx("video",{autoPlay:!0,loop:!0,muted:!0,children:U.jsx("source",{src:om,type:"video/mp4"})}),U.jsx(Dg,{})]})},Hg="/Chat-non-contact-whatsapp/assets/BebasNeue-Regular-830ea186.ttf",Wg=A.footer`
+`,Wg=()=>{const{texts:e}=jo();return U.jsxs(Hg,{children:[U.jsxs(Vg,{children:[U.jsx(Ef,{children:e.title}),U.jsx(Pf,{children:e.title2})]}),U.jsx("video",{autoPlay:!0,loop:!0,muted:!0,children:U.jsx("source",{src:om,type:"video/mp4"})}),U.jsx(Bg,{})]})},Kg="/Chat-non-contact-whatsapp/assets/BebasNeue-Regular-830ea186.ttf",Gg=A.footer`
   @font-face {
     font-family: "Bebas Neue";
-    src: url(${Hg}) format("woff");
+    src: url(${Kg}) format("woff");
     font-weight: normal;
     font-style: normal;
   }
@@ -396,7 +395,7 @@ a{
   /* order: 1; */
   margin-right: auto;
 }
-`,Kg=A.div`
+`,Qg=A.div`
 font-family: "Bebas Neue";
 display: flex;
 flex-wrap: wrap;
@@ -438,4 +437,4 @@ flex-wrap: wrap;
       scale: 1;
     }
   }
-`,Gg=()=>U.jsxs(Wg,{children:[U.jsxs(Jl,{children:["© ",new Date().getFullYear()," My Website. All rights reserved."]}),U.jsxs(Kg,{children:[U.jsxs(Jl,{children:["Created by",U.jsx("a",{href:"https://www.linkedin.com/in/sebasti%C3%A1nsiman/",target:"_blank",rel:"noopener noreferrer",children:"Sebastián Siman"})]}),U.jsxs(Jl,{children:[U.jsx("a",{href:"https://seebaasiman.github.io/Sebastian.Siman/",target:"_blank",rel:"noopener noreferrer",children:"Website"}),U.jsx("a",{href:"https://github.com/SeebaaSiman",target:"_blank",rel:"noopener noreferrer",children:"Github"}),U.jsx("a",{href:"mailto:seebaasiman@gmail.com",target:"_blank",rel:"noopener noreferrer",children:"Contact"})]})]})]});ql.createRoot(document.getElementById("root")).render(U.jsxs(O.StrictMode,{children:[U.jsx(Cg,{}),U.jsx(nm,{children:U.jsx(Vg,{})}),U.jsx(Gg,{})]}));
+`,Yg=()=>U.jsxs(Gg,{children:[U.jsxs(Jl,{children:["© ",new Date().getFullYear()," My Website. All rights reserved."]}),U.jsxs(Qg,{children:[U.jsxs(Jl,{children:["Created by",U.jsx("a",{href:"https://www.linkedin.com/in/sebasti%C3%A1nsiman/",target:"_blank",rel:"noopener noreferrer",children:"Sebastián Siman"})]}),U.jsxs(Jl,{children:[U.jsx("a",{href:"https://seebaasiman.github.io/Sebastian.Siman/",target:"_blank",rel:"noopener noreferrer",children:"Website"}),U.jsx("a",{href:"https://github.com/SeebaaSiman",target:"_blank",rel:"noopener noreferrer",children:"Github"}),U.jsx("a",{href:"mailto:seebaasiman@gmail.com",target:"_blank",rel:"noopener noreferrer",children:"Contact"})]})]})]});ql.createRoot(document.getElementById("root")).render(U.jsxs(O.StrictMode,{children:[U.jsx(Cg,{}),U.jsx(nm,{children:U.jsx(Wg,{})}),U.jsx(Yg,{})]}));
