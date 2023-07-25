@@ -9,7 +9,7 @@ export const useForm = () => {
  const [inputValue, setInputValue] = useState("");
  const [errorMessage, setErrorMessage] = useState("");
  const [placeholderText, setPlaceholderText] = useState("");
- const { texts } = useLanguage();
+ const { texts, language } = useLanguage();
 
  const onInputChange = (event) => {
   setInputValue(event.target.value);
@@ -56,7 +56,7 @@ export const useForm = () => {
   } else if (countryCode !== "" && areaCode !== "" && phoneNumber !== "") {
    setPlaceholderText(`${texts.placeholder4}`);
   }
- }, [countryCode, areaCode, phoneNumber]);
+ }, [countryCode, areaCode, phoneNumber, language]);
 
  // Función para abrir la URL de WhatsApp con los valores ingresados
  const onSend = () => {
