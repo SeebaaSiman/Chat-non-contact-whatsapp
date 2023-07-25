@@ -11,7 +11,15 @@ import {
   IconSend,
   IconSmile,
 } from "../style/IconStyle";
-import { BottomBar, BottomChat, ChatContainer, InputChat, TopBar } from "../style/chatStyle";
+import {
+  BottomBar,
+  BottomChat,
+  ChatContainer,
+  InputChat,
+  TopBar,
+} from "../style/chatStyle";
+import { useLanguage } from "../language/LanguageContext";
+import { SwitchLanguage } from "../language/SwitchLanguage";
 
 export const ChatBox = () => {
   const {
@@ -26,12 +34,14 @@ export const ChatBox = () => {
     errorMessage,
     placeholderText,
   } = useForm();
+  const { texts, setLanguage } = useLanguage();
 
   return (
     <ChatContainer>
       <TopBar>
         <IconArrow onClick={onReset} />
-        go to reset
+        <SwitchLanguage />
+        <p>{texts.toggleLanguage}</p>
         <div>
           <IconCam />
           <IconPhone />

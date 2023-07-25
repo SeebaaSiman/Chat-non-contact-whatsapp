@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { BoxStyle, device } from "./StylesGlobal";
+import { showInLeft } from "./animationStyle";
 
 export const ChatContainer = styled.div`
   background-color: #0d1b21;
@@ -13,6 +14,8 @@ export const ChatContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
 margin: 3rem 0;
+animation: ${showInLeft} .4s forwards;
+  animation-fill-mode: forwards;
   @media ${device.sm} {
     width: 60%;
   }
@@ -21,8 +24,8 @@ margin: 3rem 0;
     width: 430px;
   }
   @media ${device.lg} {
-    margin-left: 100px;
-    /* width: 30%; */
+    align-self: center;
+    margin-right: 100px;
   }
 `;
 
@@ -34,6 +37,15 @@ export const TopBar = styled.div`
   border-radius: 16px 16px 0 0;
   background-color: #1c2c33;
   color: #fff;
+  div{
+    display:flex;
+  }
+  p{
+    font-size: 1.1rem;
+  @media ${device.md}{
+    font-size: 1.3rem;
+  }
+  }
 `;
 
 export const BottomBar = styled.div`
@@ -41,9 +53,6 @@ export const BottomBar = styled.div`
   background-color: transparent;
   display: flex;
   align-items: center;
-  @media ${device.sm}{
-
-  }
 `;
 export const BottomChat = styled.div`
   display: flex;
@@ -56,7 +65,10 @@ export const BottomChat = styled.div`
   background-color: #1c2c33;
   color: #fff;
   @media ${device.sm}{
-    width: 90%;
+    width: 85%;
+    div{
+      display:flex;
+    }
   }
 `;
 
@@ -65,6 +77,12 @@ export const InputChat = styled.input`
   all: unset;
   caret-color: #00ab88;
   color: #fff;
-  font-size: 1.2rem;
-
+  font-size: 1.1rem;
+  @media ${device.sm}{
+    width:80%;
+}
+  @media ${device.md}{
+    width:90%;
+    font-size: 1.3rem;
+}
 `;

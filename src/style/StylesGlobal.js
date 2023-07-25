@@ -1,4 +1,4 @@
-import { createGlobalStyle, keyframes } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 export const device = {
   sm: `(min-width: 480px)`,
@@ -6,16 +6,7 @@ export const device = {
   lg: `(min-width: 1024px)`,
   xl: `(min-width: 1200px)`,
 };
-export const showIn = keyframes`
-0% {
-  opacity: 0;
-  transform: scale(0.2);
-  transform: translateX(-20px);
-}
-100% {
-  opacity: 1;
-  transform: scale(1);
-}`;
+
 
 export const BoxStyle = {
   boxShadow: 'rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,' +
@@ -43,6 +34,7 @@ body {
   overflow-x: hidden;
 }
 html{
+  font-family: monospace;
 
 }
 ::-webkit-scrollbar {

@@ -1,4 +1,5 @@
 import { getCountryData } from "../helper/getCountryData";
+import { useLanguage } from "../language/LanguageContext";
 import { IconArrow, IconMicrophone, IconSend } from "../style/IconStyle";
 import {
   ErrorMessage,
@@ -14,22 +15,25 @@ export const MessageContent = ({
   phoneNumber,
   errorMessage,
 }) => {
+  const { texts } = useLanguage();
+
   return (
     <MessageContainer>
       <MessageBubbleTutorial>
-        Ingresar número country/area/phone
+        {texts.messageTutorial1}
         <div>
           <IconMicrophone />
         </div>
       </MessageBubbleTutorial>
       <MessageBubbleTutorial>
-        Reset
+        {texts.messageTutorial2}
+
         <div>
           <IconArrow />
         </div>
       </MessageBubbleTutorial>
       <MessageBubbleTutorial>
-        Comenzar a chatear
+        {texts.messageTutorial3}
         <div>
           <IconSend />
         </div>
@@ -47,8 +51,17 @@ export const MessageContent = ({
         </MessageBubble>
       )}
 
-      {areaCode && <MessageBubble>area code {areaCode} </MessageBubble>}
-      {phoneNumber && <MessageBubble>phone number {phoneNumber}</MessageBubble>}
+      {areaCode && (
+        <MessageBubble>
+          {texts.messageBubble1}
+          {areaCode}
+        </MessageBubble>
+      )}
+      {phoneNumber && (
+        <MessageBubble>
+          {texts.messageBubble2} {phoneNumber}
+        </MessageBubble>
+      )}
     </MessageContainer>
   );
 };

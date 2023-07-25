@@ -1,16 +1,21 @@
 import { styled } from "styled-components";
 import { device } from "./StylesGlobal";
+import {  showInLeft, showInRight } from "./animationStyle";
 
 export const Title = styled.h1`
   z-index: 200;
   color: #fff;
   text-transform: uppercase;
   text-shadow: black 1px 2px 3px;
+  animation: ${showInLeft} .6s forwards;
+  animation-fill-mode: forwards;
 `;
 export const Title2 = styled(Title)`
   color: #00d670;
+  animation: ${showInRight} .6s forwards;
+  animation-fill-mode: forwards;
 `;
-export const Header = styled.div`
+export const Header = styled.header`
   display: flex;
   flex-direction: column;
   margin: 1rem;
@@ -29,7 +34,7 @@ export const Header = styled.div`
     }
   }
 `;
-export const Page = styled.header`
+export const Page = styled.div`
   min-height: 100vh;
   width: 100vw;
   display: flex;

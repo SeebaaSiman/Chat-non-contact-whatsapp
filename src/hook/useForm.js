@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { countries } from "../data/countries";
+import { useLanguage } from "../language/LanguageContext";
 
 export const useForm = () => {
  const [countryCode, setCountryCode] = useState("");
@@ -8,6 +9,7 @@ export const useForm = () => {
  const [inputValue, setInputValue] = useState("");
  const [errorMessage, setErrorMessage] = useState("");
  const [placeholderText, setPlaceholderText] = useState("");
+ const { texts } = useLanguage();
 
  const onInputChange = (event) => {
   setInputValue(event.target.value);
@@ -24,7 +26,7 @@ export const useForm = () => {
      setErrorMessage(""); // Limpiar el mensaje de error
     } else {
      setCountryCode(inputValue);
-     setErrorMessage("❌ Código de país inválido"); // Mostrar mensaje de error
+     setErrorMessage(`❌ ${texts.errorMessage}`); // Mostrar mensaje de error
     }
    } else if (areaCode === "") {
     setAreaCode(inputValue);
@@ -46,13 +48,13 @@ export const useForm = () => {
 
  useEffect(() => {
   if (countryCode === "" && areaCode === "" && phoneNumber === "") {
-   setPlaceholderText("Enter country code");
+   setPlaceholderText(`${texts.placeholder1}`);
   } else if (countryCode !== "" && areaCode === "" && phoneNumber === "") {
-   setPlaceholderText("Enter area code");
+   setPlaceholderText(`${texts.placeholder2}`);
   } else if (countryCode !== "" && areaCode !== "" && phoneNumber === "") {
-   setPlaceholderText("Enter phone number");
+   setPlaceholderText(`${texts.placeholder3}`);
   } else if (countryCode !== "" && areaCode !== "" && phoneNumber !== "") {
-   setPlaceholderText("Press send");
+   setPlaceholderText(`${texts.placeholder4}`);
   }
  }, [countryCode, areaCode, phoneNumber]);
 
