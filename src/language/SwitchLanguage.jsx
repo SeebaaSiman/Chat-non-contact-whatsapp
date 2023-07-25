@@ -16,10 +16,8 @@ export const SwitchLanguage = () => {
     <ToggleWrapper>
       <ToggleCheckbox
         type="checkbox"
-        // checked={language === "es"} // Marca el checkbox si el idioma es 'es'
         onChange={handleChangeLanguage}
       />
-
       <ToggleContainer>
         <ToggleButton />
       </ToggleContainer>

@@ -1,7 +1,8 @@
 import { styled } from "styled-components";
 import { BoxStyle, device } from "../style/StylesGlobal";
 import { showInLeft } from "../style/animationStyle";
-
+import eeuu from "./eeuu.png"
+import spain from "./spain.png"
 export const ToggleWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -37,7 +38,7 @@ export const ToggleButton = styled.div`
   border-radius: 0.3125em;
   width: 2rem;
   height: 2.2rem;
-  background-image: url("/src/language/eeuu.png");
+  background-image: url(${eeuu});
   background-size: cover;
   box-shadow: inset 0 -0.0625em 0.0625em 0.125em rgb(0 0 0 / 0.1),
     inset 0 -0.125em 0.0625em rgb(0 0 0 / 0.2),
@@ -53,7 +54,6 @@ export const ToggleCheckbox = styled.input`
   width: 100%;
   height: 100%;
 
-  /* fix em sizing */
   font: inherit;
   opacity: 0;
   cursor: pointer;
@@ -64,7 +64,7 @@ export const ToggleCheckbox = styled.input`
   }
   &:checked + ${ToggleContainer} ${ToggleButton} {
     left: 1.8rem;
-    background-image: url("/src/language/spain.png");
+    background-image: url(${spain});
     background-size: cover;
   }
 `;
