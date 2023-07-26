@@ -11,6 +11,7 @@ import {
   IconSend,
   IconSmile,
 } from "../style/IconStyle";
+
 import {
   BottomBar,
   BottomChat,
@@ -33,8 +34,9 @@ export const ChatBox = () => {
     inputValue,
     errorMessage,
     placeholderText,
+    isComplete,
   } = useForm();
-  const { texts, setLanguage } = useLanguage();
+  const { texts } = useLanguage();
 
   return (
     <ChatContainer>
@@ -64,6 +66,7 @@ export const ChatBox = () => {
             placeholder={placeholderText}
             value={inputValue}
             onChange={onInputChange}
+            disabled={isComplete} // Deshabilita el input cuando el campo está completo
           />
           <div>
             <IconClip />

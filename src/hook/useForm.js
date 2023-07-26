@@ -9,10 +9,12 @@ export const useForm = () => {
  const [inputValue, setInputValue] = useState("");
  const [errorMessage, setErrorMessage] = useState("");
  const [placeholderText, setPlaceholderText] = useState("");
+ const [isComplete, setIsComplete] = useState(false)
  const { texts, language } = useLanguage();
 
  const onInputChange = (event) => {
   setInputValue(event.target.value);
+
  };
  const onNextInput = () => {
   if (inputValue.trim() !== "") {
@@ -65,13 +67,22 @@ export const useForm = () => {
    window.open(url, "_blank");
   }
  };
+
+ useEffect(() => {
+  if (countryCode !== "" && areaCode !== "" && phoneNumber !== "") {
+   setIsComplete(true)
+  } else {
+   setIsComplete(false)
+  }
+ }, [countryCode, areaCode, phoneNumber])
+
  return {
   onSend, onReset, onNextInput, onInputChange, countryCode,
   areaCode,
   phoneNumber,
   inputValue,
   errorMessage,
-  placeholderText
+  placeholderText, isComplete
  };
 
 
