@@ -17,6 +17,7 @@ export const useForm = () => {
 
  };
  const onNextInput = () => {
+  //trim saca los espacios así compruebo que esté vacío
   if (inputValue.trim() !== "") {
    if (countryCode === "") {
     // Verificar si el countryCode es válido

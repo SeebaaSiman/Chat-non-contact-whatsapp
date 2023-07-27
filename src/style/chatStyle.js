@@ -73,7 +73,7 @@ export const BottomChat = styled.div`
 `;
 
 export const InputChat = styled.input`
-  width: 90%;
+  width: 100%;
   all: unset;
   caret-color: #00ab88;
   text-align: center;
