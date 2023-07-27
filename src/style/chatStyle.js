@@ -77,7 +77,9 @@ export const InputChat = styled.input`
   all: unset;
   caret-color: #00ab88;
   text-align: center;
-  color: #fff;
+  color: #00ab88;
+  text-shadow: black 1px 2px 3px;
+
   font-size: 1.1rem;
   @media ${device.sm}{
     width:80%;
