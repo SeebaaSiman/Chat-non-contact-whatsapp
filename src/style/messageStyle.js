@@ -7,6 +7,7 @@ export const MessageContainer = styled.div`
   flex-direction: column;
   align-items: end;
   justify-self: start;
+  overflow-y: auto;
 `;
 export const MessageBubble = styled.div`
   color: #fff;
@@ -20,12 +21,12 @@ export const MessageBubble = styled.div`
   margin-right: .5rem;
   margin-top: .8rem;
   max-width: 80%;
-  box-shadow: ${BoxStyle.boxShadow};
+  ${BoxStyle};
   font-size: 1.1rem;
   animation: ${showInLeft} .4s forwards;
   animation-fill-mode: forwards;
   @media ${device.md}{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   `;
 export const MessageBubbleTutorial = styled(MessageBubble)`
@@ -44,6 +45,6 @@ export const ErrorMessage = styled.div`
   color: red;
   font-size: 1.1rem;
   @media ${device.md}{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 `;

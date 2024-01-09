@@ -41,7 +41,7 @@ export const ChatBox = () => {
   return (
     <ChatContainer>
       <TopBar>
-        <IconArrow onClick={onReset} />
+        <IconArrow onClick={onReset} style={{ cursor: "pointer" }} />
         <SwitchLanguage />
         <p>{texts.toggleLanguage}</p>
         <div>
@@ -72,13 +72,14 @@ export const ChatBox = () => {
             <IconClip />
             <IconCamera />
           </div>
+          
         </BottomChat>
 
         {/* si los tres valores están completos aparece el send */}
         {countryCode && areaCode && phoneNumber ? (
-          <IconSend onClick={onSend} />
+          <IconSend onClick={onSend} style={{ cursor: "pointer" }} />
         ) : (
-          <IconMicrophone onClick={onNextInput} />
+          <IconMicrophone onClick={onNextInput} style={{ cursor: "pointer" }} />
         )}
       </BottomBar>
     </ChatContainer>

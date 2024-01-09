@@ -10,7 +10,7 @@ export const ToggleWrapper = styled.div`
   position: relative;
   border-radius: 0.5em;
   padding: 0.125em;
-  box-shadow: ${BoxStyle.boxShadow};
+  ${BoxStyle};
   width: 4.4rem;
   font-size: 1.4rem;
   animation: ${showInLeft} .4s forwards;

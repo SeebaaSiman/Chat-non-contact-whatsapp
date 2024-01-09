@@ -4,32 +4,29 @@ import { showInLeft } from "./animationStyle";
 
 export const ChatContainer = styled.div`
   background-color: #0d1b21;
-  width: 90%;
-  min-height: 450px;
+max-height: 90%;
+max-width:80%;
+  aspect-ratio: 3/4;
   color: #00ab88;
   border-radius: 16px;
-  box-shadow: ${BoxStyle.boxShadow};
-  z-index: 100;
-  display: flex;
+   ${BoxStyle};
+   z-index: 100;
+   display: flex;
   flex-direction: column;
   justify-content: space-between;
-margin: 3rem 0;
-animation: ${showInLeft} .4s forwards;
+  animation: ${showInLeft} .4s forwards;
   animation-fill-mode: forwards;
   @media ${device.sm} {
-    width: 60%;
+    height: 90%;
   }
   @media ${device.md} {
-    margin-left: 50px;
-    width: 430px;
-  }
-  @media ${device.lg} {
-    align-self: center;
-    margin-right: 100px;
+   
+    height: 85%;
   }
 `;
 
 export const TopBar = styled.div`
+${BoxStyle};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -39,25 +36,27 @@ export const TopBar = styled.div`
   color: #fff;
   div{
     display:flex;
+    place-items: center;
+    gap:15px;
   }
   p{
     font-size: 1.1rem;
-  @media ${device.md}{
-    font-size: 1.3rem;
+    @media ${device.md}{
+      /* font-size: 1.2rem; */
+    }
   }
-  }
-`;
-
+  `;
 export const BottomBar = styled.div`
-  margin: 10px;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
+margin: 10px;
+background-color: transparent;
+display: flex;
+align-items: center;
+justify-content: space-around;
 `;
 export const BottomChat = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+display: flex;
+align-items: center;
+justify-content: space-between;
   border-radius: 16px;
   padding: 10px;
   width: 80%;
@@ -79,13 +78,12 @@ export const InputChat = styled.input`
   text-align: center;
   color: #00ab88;
   text-shadow: black 1px 2px 3px;
-
   font-size: 1.1rem;
   @media ${device.sm}{
     width:80%;
 }
-  @media ${device.md}{
-    width:90%;
-    font-size: 1.3rem;
+@media ${device.md}{
+  /* width:90%;
+  font-size: 1.3rem; */
 }
 `;
